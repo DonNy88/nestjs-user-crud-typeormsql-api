@@ -7,6 +7,8 @@
 
 This project was generated using [NestJs](https://nestjs.com/).
 
+[![DonNy88](https://circleci.com/gh/DonNy88/nestjs-user-crud-typeormsql-api.svg?branch=main&style=svg)](https://app.circleci.com/pipelines/github/DonNy88/nestjs-user-crud-typeormsql-api?branch=main&filter=all)
+
 ---
 
 ## 📝 Table of Contents
