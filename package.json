@@ -15,7 +15,7 @@
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "lint:fix": "yarn lint --fix",
-    "test": "jest  --maxWorkers=50%",
+    "test": "jest --maxWorkers=50%",
     "test:watch": "jest --watch --maxWorkers=25%",
     "test:cov": "jest --coverage",
     "test:ci": "jest --coverage --runInBand --silent --detectOpenHandles",
