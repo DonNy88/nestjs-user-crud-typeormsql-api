@@ -1,0 +1,32 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  build-and-unit-test:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Run unit tests
+          command: yarn test:ci
+  build-and-linting-test:
+    docker:
+      - image: cimg/node:16.14
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          name: Run linting tests
+          command: yarn lint
+
+workflows:
+  sample:
+    jobs:
+      - build-and-unit-test
+      - build-and-linting-test

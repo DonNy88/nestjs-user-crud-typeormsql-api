@@ -1,5 +1,5 @@
 ARG PORT=3000
-ARG NODE_TAG=16-alpine
+ARG NODE_TAG=16.14-alpine
 
 FROM node:${NODE_TAG} AS base
 ARG PORT
