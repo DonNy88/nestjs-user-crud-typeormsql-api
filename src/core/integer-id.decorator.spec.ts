@@ -18,8 +18,6 @@ describe('IntegerId', () => {
 			const transformed = plainToClass(Stub, query)
 			const validationErrors = await validate(transformed)
 
-			console.log(validationErrors)
-
 			expect(validationErrors.length).toEqual(0)
 		})
 
@@ -43,8 +41,6 @@ describe('IntegerId', () => {
 
 			const transformed = plainToClass(Stub, query)
 			const validationErrors = await validate(transformed)
-
-			console.log({ query, validationErrors })
 
 			expect(validationErrors.length).toEqual(0)
 		})

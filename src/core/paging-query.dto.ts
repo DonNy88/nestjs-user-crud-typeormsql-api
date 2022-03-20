@@ -7,7 +7,7 @@ export class PagingQuery {
 	@IsOptional()
 	@Min(0)
 	@Type(() => Number)
-	pageNumber = 0
+	pageIndex = 0
 
 	@ApiPropertyOptional({ description: 'The limit of number of results to return', default: 50, minimum: 1, maximum: 100, type: Number })
 	@IsOptional()
@@ -20,6 +20,6 @@ export class PagingQuery {
 	}
 
 	toDatabaseOffset(): number {
-		return this.pageSize * this.pageNumber
+		return this.pageSize * this.pageIndex
 	}
 }

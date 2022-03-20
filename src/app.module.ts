@@ -19,6 +19,8 @@ import { UsersModule } from './users'
 export class AppModule {}
 
 function createTypeOrm(config: ApiConfigService): TypeOrmModuleOptions {
+	const isLocalDevelopment = config.isDevelopment || config.isLocal
+
 	return {
 		type: 'postgres',
 		port: config.postgresqlPort,
@@ -29,9 +31,9 @@ function createTypeOrm(config: ApiConfigService): TypeOrmModuleOptions {
 		retryAttempts: 10,
 		keepConnectionAlive: true,
 		synchronize: config.postgresqlSynchronize,
-		trace: false,
-		debug: true,
-		logging: true,
+		trace: true,
+		debug: isLocalDevelopment,
+		logging: isLocalDevelopment,
 		extra: { timezone: 'utc' }
 	} as TypeOrmModuleOptions
 }
