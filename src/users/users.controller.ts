@@ -38,7 +38,6 @@ export class UsersController {
 	@ApiOkResponse({ type: PagedUserResponse, description: 'Return a list of Users that match the given criteria' })
 	@ApiNotFoundResponse({ type: EmptyPagedUserResponse, description: 'If there are no user that match the given criteria' })
 	async searchUsers(@Query() page: PagingQuery, @Query() sort: SortUserQuery, @Query() search: SearchUserQuery, @Res() response: Response) {
-		console.log({ search })
 		const { status, body } = await this.crud.search(search, sort, page)
 		return response.status(status).send(body)
 	}
