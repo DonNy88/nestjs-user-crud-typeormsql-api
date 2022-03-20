@@ -30,7 +30,8 @@ function createTypeOrm(config: ApiConfigService): TypeOrmModuleOptions {
 		keepConnectionAlive: true,
 		synchronize: config.postgresqlSynchronize,
 		trace: false,
-		debug: false,
+		debug: true,
+		logging: true,
 		extra: { timezone: 'utc' }
 	} as TypeOrmModuleOptions
 }

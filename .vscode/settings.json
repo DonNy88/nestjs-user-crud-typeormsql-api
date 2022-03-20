@@ -2,6 +2,7 @@
     "cSpell.words": [
         "cimg",
         "circleci",
-        "nestjs"
+        "nestjs",
+        "typeorm"
     ]
 }

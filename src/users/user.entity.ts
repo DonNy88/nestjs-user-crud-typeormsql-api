@@ -4,7 +4,7 @@ import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedCol
 export class User {
 	@PrimaryGeneratedColumn()
 	id: number
-	s
+
 	@Column({ length: 64 })
 	name!: string
 
@@ -28,16 +28,4 @@ export class User {
 
 	@DeleteDateColumn({ name: 'deleted_at', select: false })
 	deletedAt?: Date
-
-	// static async saveOrReturnFoundOne(user: Exclude<User, 'createdAt' | 'updatedAt' | 'deletedAt'>) {
-	// 	if (!!user?.id) {
-	// 		const userFound = await User.findOne(user.id)
-
-	// 		if (!!userFound) {
-	// 			return userFound
-	// 		}
-	// 	}
-
-	// 	return await User.save(user)
-	// }
 }
