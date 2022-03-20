@@ -12,10 +12,9 @@ import { ApiConfigService } from './api-config'
 
 async function bootstrap() {
 	const globalPrefix = 'api/v1'
-	const port = (process.env.PORT || 3000) as number
 	const app = await bootstrapApp(globalPrefix)
 
-	const { isProduction } = app.get(ApiConfigService)
+	const { isProduction, port } = app.get(ApiConfigService)
 
 	if (!isProduction) {
 		bootstrapSwagger(globalPrefix, port, app)
