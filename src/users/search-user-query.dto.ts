@@ -9,7 +9,6 @@ export class SearchUserQuery extends SearchQuery {
 			return []
 		}
 
-		// TODO: Write a spec file to test this method
 		return this.q.reduce((where: FindConditions<User>[], value: string) => {
 			const queryLike = ILike(`%${value}%`)
 			where.push({ name: queryLike }, { middleName: queryLike }, { surname: queryLike }, { birthPlace: queryLike })
