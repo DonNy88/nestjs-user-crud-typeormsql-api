@@ -1,6 +1,6 @@
 import { FindConditions, ILike } from 'typeorm'
 import { SearchQuery } from '../core'
-import { isUnixTime } from '../utils'
+import { isIso8601Format } from '../utils'
 import { User } from './user.entity'
 
 export class SearchUserQuery extends SearchQuery {
@@ -14,7 +14,7 @@ export class SearchUserQuery extends SearchQuery {
 			const queryLike = ILike(`%${value}%`)
 			where.push({ name: queryLike }, { middleName: queryLike }, { surname: queryLike }, { birthPlace: queryLike })
 
-			if (isUnixTime(value)) {
+			if (isIso8601Format(value)) {
 				where.push({ birthDate: new Date(value) })
 			}
 
