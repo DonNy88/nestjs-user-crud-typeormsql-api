@@ -25,6 +25,8 @@ This is a simple NestJs app that create a CRUD for the users entity and resolve 
 - Create an endpoint to provide full user info by id (check if the user exist)  
 - Create an endpoint to get users with queries parameter: pageNumber, pageSize, search, sort
 
+The User entity has this fields: id, name, middleName, surname, birthPlace, birthDate. The middleName is optional and the format of the birthDate is [UNIX Epoch time](https://en.wikipedia.org/wiki/Unix_time).
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.

@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common'
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm'
 import { ApiConfigModule, ApiConfigService } from './api-config'
 import { HealthModule } from './health'
+import { UsersModule } from './users'
 
 @Module({
 	imports: [
@@ -11,7 +12,8 @@ import { HealthModule } from './health'
 			imports: [ApiConfigModule],
 			inject: [ApiConfigService],
 			useFactory: createTypeOrm
-		})
+		}),
+		UsersModule
 	]
 })
 export class AppModule {}
