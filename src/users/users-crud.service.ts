@@ -35,7 +35,7 @@ export class UserCrud {
 
 	async search(search: SearchUserQuery, sort: SortUserQuery, page: PagingQuery) {
 		const where = search.toDatabaseWhere()
-		const order = sort.toDatabaseQuery()
+		const order = sort.toDatabaseOrder()
 		const skip = page.toDatabaseOffset()
 		const take = page.toDatabaseLimit()
 
