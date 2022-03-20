@@ -20,6 +20,16 @@ export class UserCrud {
 		return { status: HttpStatus.CREATED, body: this.userMapper(await this.repository.save(user)) }
 	}
 
+	async readById(id: number) {
+		const userFound = await this.repository.findOne(id)
+
+		if (!!userFound) {
+			return { status: HttpStatus.OK, body: this.userMapper(userFound) }
+		}
+
+		return { status: HttpStatus.NOT_FOUND }
+	}
+
 	private userMapper(user: User) {
 		return {
 			birthDate: user.birthDate,
@@ -28,6 +38,6 @@ export class UserCrud {
 			surname: user.surname,
 			id: user.id,
 			middleName: user.middleName
-		} as User
+		}
 	}
 }

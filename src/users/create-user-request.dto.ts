@@ -4,7 +4,7 @@ import { IsDate, IsOptional, IsString, Length } from 'class-validator'
 import { IntegerId } from '../core'
 
 export class CreateUserRequest {
-	@ApiProperty({ description: 'The ID of the user', example: '1' })
+	@ApiProperty({ description: 'The ID of the user', example: 1 })
 	@IntegerId(false)
 	id?: number
 
