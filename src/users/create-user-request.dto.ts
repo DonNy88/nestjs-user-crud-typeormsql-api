@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
 import { Type } from 'class-transformer'
-import { IsDate, IsISO8601, IsOptional, IsString, Length } from 'class-validator'
+import { IsDate, IsOptional, IsString, Length } from 'class-validator'
 import { IntegerId } from '../core'
 
 export class CreateUserRequest {
@@ -30,8 +30,7 @@ export class CreateUserRequest {
 	birthPlace!: string
 
 	@ApiProperty({ description: 'The birth date of the user, in ISO 8601 format', example: '2022-01-31' })
-	@IsISO8601()
-	@Type(() => Date)
 	@IsDate()
+	@Type(() => Date)
 	birthDate!: Date
 }
