@@ -91,8 +91,6 @@ describe('SortUserQuery', () => {
 
 			const result = sortUserQuery.toDatabaseOrder()
 
-			console.log({ result })
-
 			expect(result).toEqual(expected)
 		})
 	})
