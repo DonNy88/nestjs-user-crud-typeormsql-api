@@ -696,10 +696,10 @@
   dependencies:
     check-disk-space "3.3.0"
 
-"@nestjs/testing@^8.4.6":
-  version "8.4.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-8.4.6.tgz#4e80368090bb71d775d14d99efa96803b96312d0"
-  integrity sha512-uGRNQ0iWIHqjz5CLxQCTtQ3dB1KyPfkHXnko5mBwKk/iBTiACmll61rVt89Wh8RM+w0bmvCHp9sacNI7IynESg==
+"@nestjs/testing@^8.4.7":
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-8.4.7.tgz#fe4f356c0e081e25fe8c899a65e91dd88947fd13"
+  integrity sha512-aedpeJFicTBeiTCvJWUG45WMMS53f5eu8t2fXsfjsU1t+WdDJqYcZyrlCzA4dL1B7MfbqaTURdvuVVHTmJO8ag==
   dependencies:
     tslib "2.4.0"
 
@@ -2827,10 +2827,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-helmet@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.1.0.tgz#e98a5d4bf89ab8119c856018a3bcc82addadcd47"
-  integrity sha512-klsunXs8rgNSZoaUrNeuCiWUxyc+wzucnEnFejUg3/A+CaF589k9qepLZZ1Jehnzig7YbD4hEuscGXuBY3fq+g==
+helmet@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-6.0.0.tgz#8e183820ddccd7729a206ad73c577b264f495595"
+  integrity sha512-FO9RpR1wNJepH/GbLPQVtkE2eESglXL641p7SdyoT4LngHFJcZheHMoyUcjCZF4qpuMMO1u5q6RK0l9Ux8JBcg==
 
 hexoid@1.0.0:
   version "1.0.0"
